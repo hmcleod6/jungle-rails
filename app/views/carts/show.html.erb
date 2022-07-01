@@ -4,6 +4,12 @@
     <h1>My Cart</h1>
   </header>
 
+<% if cart.size == 0 %>
+<div class="alert alert-warning text-center" role="alert">
+  Your cart is empty, please return to the <%= link_to root_path do %>
+  Home Page <% end %> to select products</div>
+  <% else %>
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +54,6 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
 </section>
